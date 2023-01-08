@@ -1,0 +1,21 @@
+{
+  "title": "Leandro Pelegrini",
+  "url": "https://lpelegrini.dev/",
+  "language": "pt-br",
+  "description": "Site pessoal de Leandro Pelegrini",
+  "feed": {
+    "subtitle": "Site pessoal de Leandro Pelegrini",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://lpelegrini.dev/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://lpelegrini.dev/feed/feed.json"
+  },
+  "author": {
+    "name": "Leandro Pelegrini",
+    "email": "lpelegrini@duck.com",
+    "url": "https://lpelegrini.dev/sobre/"
+  }
+}
