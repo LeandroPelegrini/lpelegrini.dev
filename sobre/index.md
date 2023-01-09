@@ -7,4 +7,7 @@ eleventyNavigation:
   order: 3
 ---
 
-Site pessoal de Leandro Pelegrini.
+🤖 Programador web autodidata \
+👽 Focado em Jamstack e indieweb \
+🎞️ Filmes ruins ou indies (de preferência com Nicolas Cage) \
+🍺 Uma cerveja gelada, sim, por favor

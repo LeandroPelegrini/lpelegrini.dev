@@ -17,7 +17,7 @@
   --text-color-link-visited: #17050F;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --color-gray-20: #e0e0e0;
     --color-gray-50: #C0C0C0;
@@ -27,7 +27,7 @@
     --text-color-link: #1493fb;
     --text-color-link-visited: #a6a6f8;
 
-    --background-color: #15202b;
+    --background-color: #18181b;
   }
 }
 
@@ -43,6 +43,7 @@ body {
   margin: 0;
   font-family: var(--font-family);
   color: var(--text-color);
+  background: url("/img/pattern.png");
   background-color: var(--background-color);
 }
 
@@ -68,12 +69,18 @@ a[href]:visited {
 
 main {
   padding: 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 main :first-child {
   margin-top: 0;
 }
 header {
   border-bottom: 1px dashed var(--color-gray-20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 header:after {
   content: "";
@@ -121,7 +128,7 @@ code {
   padding: 0 1rem;
   float: left;
   margin: 1rem 0; /* 16px /16 */
-  font-size: 1em; /* 16px /16 */
+  font-size: 2em; /* 16px /16 */
 }
 .home :link:not(:hover) {
   text-decoration: none;
@@ -212,7 +219,8 @@ a[href].post-tag:visited {
 }
 a[href].post-tag:hover,
 a[href].post-tag:focus {
-  background-color: var(--color-gray-20);
+  background-color: var(--color-gray-90);
+  color: var(--background-color)
 }
 .postlist-item > .post-tag {
   align-self: center;
