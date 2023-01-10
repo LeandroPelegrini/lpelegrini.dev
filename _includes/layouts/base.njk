@@ -21,8 +21,8 @@
       {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
+        <li class="nav-item"><a style="align-self: center;" rel="me noopener noreferrer" target="_blank" href="https://bolha.us/@lp3l">Mastodon</a></li>
       </ul>
-      <a style="align-self: center;" rel="me noopener noreferrer" target="_blank" href="https://bolha.us/@lp3l">Mastodon</a>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
