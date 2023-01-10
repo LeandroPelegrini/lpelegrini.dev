@@ -133,7 +133,6 @@ code {
 .nav {
   padding: 0;
   list-style: none;
-  margin-left: auto;
 }
 .nav-item {
   display: inline-block;
