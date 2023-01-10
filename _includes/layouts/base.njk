@@ -16,7 +16,8 @@
   <body>
     <header>
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-
+       
+      <div>
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
       {%- for entry in collections.all | eleventyNavigation %}
@@ -24,6 +25,7 @@
       {%- endfor %}
       </ul>
       <a style="align-self: center;" rel="me noopener noreferrer" target="_blank" href="https://bolha.us/@lp3l">Mastodon</a>
+      </div>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
