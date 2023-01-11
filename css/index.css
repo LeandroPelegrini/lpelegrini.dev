@@ -69,7 +69,7 @@ a[href]:visited {
 
 main {
   padding: 1rem;
-  max-width: 90rem;
+  max-width: 90ch;
   margin: 0 auto;
 }
 main :first-child {
