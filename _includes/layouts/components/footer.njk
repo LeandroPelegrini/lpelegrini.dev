@@ -1,0 +1,12 @@
+<footer class="footer">
+    <p class="feito">Feito com ☕ café e <a rel="noopener noreferrer" target="_blank" href="https://www.11ty.dev/">11ty</a></p>
+    <p class="copy">Copyright © <span id="copyYear"> </span> Leandro Pelegrini. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  var myDate = new Date();
+  year = myDate.getYear() + 1900;
+  document
+    .getElementById("copyYear")
+    .textContent = year;
+</script>

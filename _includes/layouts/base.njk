@@ -26,10 +26,19 @@
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
+        {{ content | safe }}
+        {% if title!="Sobre" %}
+          <p>Tags:</p>
+          {% for tag in collections.tagList %}
+              {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+              <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+          {% endfor %}
+        {% endif %}
     </main>
 
-    <footer></footer>
+    <footer>
+      {% include "_includes/layouts/components/footer.njk" %}
+    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
