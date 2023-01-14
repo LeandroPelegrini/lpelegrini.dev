@@ -15,30 +15,39 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body>
-    <header>
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-        <li class="nav-item"><a style="align-self: center;" rel="me noopener noreferrer" target="_blank" href="https://bolha.us/@lp3l">Mastodon</a></li>
-      </ul>
-    </header>
+      <header>
+        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+        <ul class="nav">
+        {%- for entry in collections.all | eleventyNavigation %}
+          <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        {%- endfor %}
+          <li class="nav-item"><a style="align-self: center;" rel="me noopener noreferrer" target="_blank" href="https://bolha.us/@lp3l">Mastodon</a></li>
+        </ul>
+      </header>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-        {{ content | safe }}
-        {% if title!="Sobre" %}
-          <p>Tags:</p>
-          {% for tag in collections.tagList %}
-              {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-              <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-          {% endfor %}
-        {% endif %}
-    </main>
+      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+          {{ content | safe }}
+      </main>
+      
+      <aside class="left-sidebar">
+        <h1 class="nome sticky">👺 {{ metadata.title }}</h1>
+      </aside>
+      
+      <aside class="right-sidebar">
+        <div class="sticky">
+          {% if title!="Sobre" %}
+            <p>Tags:</p>
+            {% for tag in collections.tagList %}
+                {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </aside>
 
-    <footer>
-      {% include "_includes/layouts/components/footer.njk" %}
-    </footer>
+      <footer>
+        {% include "_includes/layouts/components/footer.njk" %}
+      </footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>

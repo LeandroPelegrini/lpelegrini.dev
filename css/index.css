@@ -50,6 +50,41 @@ body {
 body {
   position: relative;
   min-height: 85vh;
+  display: grid;
+  grid-template-areas: "header" "left-sidebar" "main" "right-sidebar" "footer";     
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 1000px) {
+  body {
+    grid-template: "header           header             header"         min-content
+                   "left-sidebar     main               right-sidebar"  1fr
+                   "footer           footer             footer"         min-content
+               / minmax(auto, 250px) minmax(250px, 1fr) minmax(auto, 250px);
+
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+.left-sidebar {
+  grid-area: left-sidebar;
+  float: right;
+}
+
+.right-sidebar {
+  grid-area: right-sidebar;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
 }
 
 body::after {
@@ -62,6 +97,11 @@ body::after {
   min-height: 100vh;
   background: linear-gradient(238deg, rgba(39,255,247,1) 0%, rgba(196,19,232,1) 25%, rgba(41,255,204,1) 50%, rgba(196,19,232,1) 75%, rgba(41,255,204,1) 100%);
   /* background-image: linear-gradient(238deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff0080); */
+}
+
+.sticky {
+  position: sticky;
+  top: 1rem;
 }
 
 p:last-child {
@@ -107,8 +147,7 @@ main :first-child {
 
 footer {
   width: 100%;
-  position: absolute;
-  bottom: -120px;
+  bottom: 0;
 }
 
 .copy {
