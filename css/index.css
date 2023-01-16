@@ -214,9 +214,16 @@ code {
   list-style: none;
 }
 .nav-item {
-  display: inline-block;
+  display: inline;
   margin-right: 1em;
 }
+
+.nav-item:nth-child(4)::before {
+  display: block;
+  content: '';
+  margin-top: 1em;
+}
+
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
 }
