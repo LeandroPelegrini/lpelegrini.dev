@@ -74,7 +74,8 @@ body {
 }
 
 .main { grid-area: main;
-        padding: 1rem; }
+        padding: 1rem;
+        min-width: 0 }
 .menu { 
   border-bottom: 1px dashed #C0C0C0;
   text-align: center;
