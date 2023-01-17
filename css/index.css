@@ -43,12 +43,11 @@ body {
   margin: 0;
   font-family: var(--font-family);
   color: var(--text-color);
+  position: relative;
+  min-height: 85vh;
+  max-width: 100%;
   background: url("/img/pattern.png");
   background-color: var(--background-color);
-}
-
-body {
-  min-height: 85vh;
 }
 
 .container {
