@@ -1,6 +1,6 @@
 /* Defaults */
 :root {
-  --font-family: -apple-system, system-ui, sans-serif;
+  --font-family: monospace;
   --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -48,6 +48,8 @@ body {
   max-width: 100%;
   background: url("/img/pattern.png");
   background-color: var(--background-color);
+  line-height: 1.6;
+  font-size: 1.2em;
 }
 
 .container {
